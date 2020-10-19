@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "RestoreTab",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches" : [
+                "<all_urls>"
+            ],
+            "match_about_blank" : true,
+            "js" : ["jquery-3.5.1.min.js"]
+
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "tabs", "activeTab", "storage", "contextMenus"
+    ],
+    "browser_action": {
+        "default_title": "Click the icon to restore a tab. Restores tabs of closed window in a new window"
+    }
+  }
